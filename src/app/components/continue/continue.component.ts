@@ -8,16 +8,23 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./continue.component.css'],
 })
 export class ContinueComponent implements OnInit {
+  @Input() validateForm: boolean = true;
   @Input() form!: NgForm;
 
   constructor(private router: Router) { }
 
   dashboard() {
-    if (this.form && this.form.valid) {
-    this.router.navigate(['/dashboard']);
-  } else {
-    alert('Por favor, completa todos los campos requeridos.'); // Manejo de error si no es válido
-  }
+    if (this.validateForm && this.form) {
+      // Valida solo si validateForm es true y el formulario existe
+      if (this.form.valid) {
+        this.router.navigate(['/dashboard']);
+      } else {
+        alert('Por favor, completa todos los campos requeridos.');
+      }
+    } else {
+      // Si validateForm es false o no está en login, redirige directamente
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   ngOnInit(): void {
