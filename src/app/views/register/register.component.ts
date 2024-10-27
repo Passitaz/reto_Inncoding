@@ -22,6 +22,11 @@ export class RegisterComponent implements OnInit {
       alert('Por favor, completa todos los campos requeridos.');
     }
   }
+
+  cancel() {
+      this.router.navigate(['']);
+  }
+
   checkPasswords(form: NgForm): boolean {
     const password = form.value.password;
     const confirmPassword = form.value.confirmPassword;

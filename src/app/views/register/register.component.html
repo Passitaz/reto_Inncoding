@@ -28,7 +28,8 @@
                 </div>
                 <p class="help is-danger" *ngIf="!passwordsMatch">Las contraseñas no coinciden.</p>
             </div>
-            <div class="control is-pulled-right">
+            <div class="control is-flex is-justify-content-center">
+                <button class="button is-info" type="button" (click)="cancel()">Cancelar</button>
                 <button class="button is-info" type="button" (click)="onboarding(loginForm)">Registrarse</button>
             </div>
         </form>
