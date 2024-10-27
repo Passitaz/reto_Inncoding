@@ -1,0 +1,8 @@
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button.is-info{
+    margin-left: 850px;
+}
