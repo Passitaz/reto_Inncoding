@@ -1,1 +1,48 @@
-<p>dashboard works!</p>
+<app-header></app-header>
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered has-text-weight-bold is-size-3 custom-title">Información de Usuarios</h1>
+        <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo Electrónico</th>
+                    <th>Edad</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>juan.perez&#64;example.com</td>
+                    <td>30</td>
+                    <td>México</td>
+                </tr>
+                <tr>
+                    <td>Maria García</td>
+                    <td>maria.garcia&#64;example.com</td>
+                    <td>25</td>
+                    <td>España</td>
+                </tr>
+                <tr>
+                    <td>Carlos López</td>
+                    <td>carlos.lopez&#64;example.com</td>
+                    <td>35</td>
+                    <td>Argentina</td>
+                </tr>
+                <tr>
+                    <td>Ana Martínez</td>
+                    <td>ana.martinez&#64;example.com</td>
+                    <td>28</td>
+                    <td>Chile</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="field is-grouped is-grouped-right">
+        <div class="control">
+            <app-cancel label="Cerrar Sesión"></app-cancel>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

@@ -11,6 +11,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './views/register/register.component';
 import { OnboardingComponent } from './views/onboarding/onboarding.component';
+import { CancelComponent } from './components/cancel/cancel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OnboardingComponent } from './views/onboarding/onboarding.component';
     ContinueComponent,
     DashboardComponent,
     RegisterComponent,
-    OnboardingComponent
+    OnboardingComponent,
+    CancelComponent
   ],
   imports: [
     BrowserModule,
