@@ -1,0 +1,37 @@
+<app-header></app-header>
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered">Registro</h1>
+        <form #loginForm="ngForm">
+            <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Tu nombre" required ngModel name="text">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Correo Electrónico</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="ejemplo@correo.com" required ngModel name="email">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Contraseña</label>
+                <div class="control">
+                    <input class="input" type="password" placeholder="********" required ngModel name="password">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Confirmar Contraseña</label>
+                <div class="control">
+                    <input class="input" type="password" placeholder="********" required ngModel name="confirmPassword">
+                </div>
+                <p class="help is-danger" *ngIf="!passwordsMatch">Las contraseñas no coinciden.</p>
+            </div>
+            <div class="control is-pulled-right">
+                <button class="button is-info" type="button" (click)="onboarding(loginForm)">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</section>
+<app-footer></app-footer>

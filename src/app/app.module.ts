@@ -7,6 +7,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './views/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContinueComponent } from './components/continue/continue.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './views/register/register.component';
+import { OnboardingComponent } from './views/onboarding/onboarding.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { ContinueComponent } from './components/continue/continue.component';
     HeaderComponent,
     LoginComponent,
     FooterComponent,
-    ContinueComponent
+    ContinueComponent,
+    DashboardComponent,
+    RegisterComponent,
+    OnboardingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

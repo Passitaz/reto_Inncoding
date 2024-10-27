@@ -1,25 +1,28 @@
 <app-header></app-header>
-
-<section class="section">   <!-- Aplica un espaciado vertical alrededor de la sección -->
+<section class="section"> <!-- Aplica un espaciado vertical alrededor de la sección -->
     <div class="container">
         <h1 class="title">Iniciar Sesión</h1>
-        <form>
-            <div class="field"> <!-- Un contenedor para los elementos de formulario que aplica un espaciado adecuado. -->
+        <form #loginForm="ngForm">
+            <div class="field">
+                <!-- Un contenedor para los elementos de formulario que aplica un espaciado adecuado. -->
                 <label class="label">Correo Electrónico</label>
                 <div class="control"> <!-- Un contenedor para los elementos de control de formulario, como inputs. -->
-                    <input class="input" type="email" placeholder="ejemplo@correo.com" required>
+                    <input class="input" type="email" placeholder="ejemplo@correo.com" required ngModel name="email">
                 </div>
             </div>
-
-            <div class="field"> <!-- Un contenedor para los elementos de formulario que aplica un espaciado adecuado. -->
+            <div class="field">
+                <!-- Un contenedor para los elementos de formulario que aplica un espaciado adecuado. -->
                 <label class="label">Contraseña</label>
                 <div class="control"> <!-- Un contenedor para los elementos de control de formulario, como inputs. -->
-                    <input class="input" type="password" placeholder="********" required>
+                    <input class="input" type="password" placeholder="********" required ngModel name="password">
                 </div>
             </div>
+            <div>
+                <app-continue [form]="loginForm"></app-continue>
+            </div>
+            <p class="has-text-centered">¿No tienes una cuenta? <a href="/register" class="has-text-info">Regístrate
+                    aquí</a></p>
         </form>
     </div>
 </section>
-
-<app-continue></app-continue>
 <app-footer></app-footer>

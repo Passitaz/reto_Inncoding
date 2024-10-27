@@ -1,12 +1,17 @@
 .container {
     display: flex;
-    /* Activar flexbox */
     flex-direction: column;
-    /* Disposición en columna */
     align-items: center;
 }
 
+.section {
+    margin-top: -40px;
+}
 .input {
     width: 500px;
     margin: 5px;
+}
+
+.button {
+    margin-right: 0;
 }
