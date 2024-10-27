@@ -9,15 +9,8 @@
 .section {
     margin-top: -60px;
 }
+
 .input {
     width: 500px;
     margin: 5px;
-}
-
-.button {
-    margin-top: 20px;
-}
-
-.button + .button {
-    margin-left: 200px;
 }
