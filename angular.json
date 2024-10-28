@@ -29,6 +29,9 @@
             ],
             "scripts": [
               "node_modules/bulma-carousel/dist/js/bulma-carousel.min.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "bulma-carousel"
             ]
           },
           "configurations": {
