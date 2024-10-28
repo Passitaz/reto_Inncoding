@@ -4,9 +4,108 @@
     flex-direction: column;
     /* Disposición en columna */
     align-items: center;
+    width: 100%;
 }
 
 .input {
     width: 500px;
     margin: 5px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .input {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 896px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .input {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .input {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .input {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 1400px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .label {
+        font-size: 25px;
+    }
+
+    .input {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 540px) and (max-height: 720px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .label {
+        font-size: 20px;
+    }
+
+    .input {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 344px) and (max-height: 882px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .input {
+        width: 20px;
+    }
 }

@@ -5,3 +5,10 @@
 .custom-title {
     color: #a72222;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    .container {
+        width: 70%;
+    }
+}
