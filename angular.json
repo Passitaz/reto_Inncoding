@@ -32,7 +32,8 @@
             ],
             "allowedCommonJsDependencies": [
               "bulma-carousel"
-            ]
+            ],
+            "baseHref": "/reto_Inncoding/"
           },
           "configurations": {
             "production": {
