@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import 'bulma-carousel';
 
 declare var bulmaCarousel: any;
@@ -9,7 +9,7 @@ declare var bulmaCarousel: any;
   styleUrls: ['./onboarding.component.css']
 })
 export class OnboardingComponent implements OnInit, AfterViewInit {
-  showContinue: boolean = false; 
+  showContinue: boolean = false;
 
   constructor() { }
 
@@ -18,17 +18,21 @@ export class OnboardingComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // Inicializar el carrusel después de que se haya renderizado la vista
-    const carousel = bulmaCarousel.attach('#carousel-demo', {
+    const carousels = bulmaCarousel.attach('.carousel', {
       slidesToScroll: 1,
       slidesToShow: 1
     });
 
-    carousel.forEach((carouselItem: any) => {
-      carouselItem.on('index.change', (index: number) => {
-        // Mostrar el componente "Continuar" cuando el índice sea 2 (tercera imagen)
-        this.showContinue = (index === carouselItem.items.length - 1);
+    // Acceder a la instancia del carrusel y agregar el evento
+    carousels.forEach((carousel: any) => {
+      carousel.on('slide:after', (event: any) => {
+        const currentIndex = event.detail.index; // Índice de la diapositiva actual
+        const lastIndex = 2; // Suponiendo que hay 3 imágenes, la última tiene el índice 2
+
+        // Muestra el botón solo cuando está en la última imagen
+        this.showContinue = (currentIndex === lastIndex);
+        console.log('Current index after slide:', currentIndex); // Mensaje de depuración
       });
     });
   }
-
 }
